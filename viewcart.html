@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/viewcart.css">
+    <title>https://www.lybrate.com/viewcart</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="container">
+        <div>
+            <!-- <div>Your Cart is Empty</div>
+            <div>Add items to it now</div>
+            <button><a href="">Shop Now</a></button> -->
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script type="module">
+// import navbar and footer
+let container=document.getElementById("container")
+let cartarr=[]
+if(cartarr.length===0)
+{
+    // check key of cartarr in localstorage
+    let div=document.createElement("div");
+    div.id="emptyCartBox";
+    div.style.backgroundImage="url('./images/cart is empty.png')"
+    div.style.backgroundPosition="center"
+    let p1=document.createElement("p");
+    p1.textContent="Your Cart is Empty"
+    p1.id="p1"
+    let p2=document.createElement("p");
+    p2.textContent="Add items to it now";
+    p2.id="p2"
+
+    
+    let button=document.createElement("button");
+    button.id="shopNow"
+    let a=document.createElement("a");
+    a.textContent="Shop Now";
+    a.href="";
+    button.append(a);
+    div.append(p1,p2,button);
+    container.append(div)
+
+}
+</script>
