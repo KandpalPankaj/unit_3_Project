@@ -359,7 +359,7 @@ import info from "./components/info.js";
 document.getElementById("info").innerHTML=info();
 
 
-let cartArr=[];
+let cartArr=[] || JSON.parse(localStorage.getItem("cartData"));
 
 
 
@@ -927,7 +927,7 @@ let addToCart = (el)=>{
     
     cartArr.push(el);
     localStorage.setItem("cartArr",JSON.stringify(cartArr));
-    
+
 
 }
 </script>
