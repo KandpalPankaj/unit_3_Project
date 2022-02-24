@@ -51,9 +51,15 @@
                     <span>LybrateCash</span>
                 </div>
                 <div id="homebtn"><button>Home</button></div>
+
+                <a id="cart" href="viewcart.html"><i class="material-icons">
+                        shopping_cart
+                    </i></a>
+
                 <div id="cart"><i class="material-icons">
                         shopping_cart
                     </i></div>
+
 
             </div>
 
@@ -924,7 +930,9 @@ for(let i=0; i<mainArr.length; i++){
 }
 
 let addToCart = (el)=>{
-    
+
+    cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
     cartArr.push(el);
     localStorage.setItem("cartArr",JSON.stringify(cartArr));
 
