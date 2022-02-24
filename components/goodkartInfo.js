@@ -1,4 +1,4 @@
-function info(){
+function goodKartInfo(){
     return `<h3>GoodKart: Buy Health Care and Wellness Products Online</h3>
     <p>GoodKart is Lybrate’s endeavour to deliver the best of the best Health care products at your doorstep. GoodKart
         brings to you a vibrant mix of health products, both from reputed international brands to local Indian brands.
@@ -164,4 +164,4 @@ function info(){
         is by Wallet, credit should be available within 7 to 10 working days. </p>`
 }
 
-export default info;
+export default goodKartInfo;
