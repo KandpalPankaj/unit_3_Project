@@ -227,7 +227,7 @@ let responsiveSlider = function () {
 
     let slider = document.getElementById("slider");
     let sliderWidth = slider.offsetWidth;
-    // console.log(sliderWidth)
+    console.log(sliderWidth)
     let slideList = document.getElementById("slideWrap");
     let count = 1;
     let items = slideList.querySelectorAll("li").length;

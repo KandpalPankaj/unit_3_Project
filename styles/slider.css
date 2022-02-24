@@ -2,7 +2,7 @@
 
 #slider {
     position: relative;
-    width: 1200px;
+    width: 1222px;
     height: 254px;
     margin: 5px 4.5rem;
     overflow: hidden;
@@ -27,7 +27,7 @@
     /* border: 1px solid green; */
   }
   #slider ul li img{
-    width: 1220px;
+    width: 1222px;
     height: 254px;
     /* border: 1px solid red; */
   }
