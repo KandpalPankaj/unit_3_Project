@@ -1,0 +1,240 @@
+#container{
+    background-color: #eeeeee;
+    min-height: 570px;
+    border: 1px solid #eeeeee;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+
+}
+#leftBox{
+    flex: 5;
+    margin-left: 80px;
+}
+
+#address{
+    height: 50px;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px;
+    
+}
+#arrowIcon{
+    color: #c82506;
+    margin-right: 13px;
+}
+#login{
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    background-color: white;
+    display: flex;
+    color: #726e6e;
+}
+#login>div{
+    margin:13px;
+}
+#checkboxIcon{
+    color: #008000;
+    font-size: 40px;
+    line-height: 50px;
+}
+#verify{
+    height: 50px;
+    padding-left: 15px;
+    display: flex;
+    background-color: #c82506;
+}
+#two{
+    border: 1px solid white;
+    width: 25px;
+    text-align: center;
+    background-color: white;
+    height: 25px;
+    border-radius: 2px;
+    margin-top: 13px;
+    margin-right: 13px;
+    color: #c82506;
+}
+#two~div{
+line-height: 50px;
+color: white;
+}
+#text{
+    border: 1px solid #d4d0d0;
+    min-height: 180px;
+    overflow: scroll;
+    background-color: white;
+}
+#inputs{
+    border: 1px solid #d4d0d0;
+    border-top: 2px solid #d4d0d0;
+    width: 95%;
+    min-height: 85%;
+    margin:10px 0px 20px 20px ;
+    
+}
+#box{
+    border: 1px solid #d4d0d0;
+    border-top: 2px solid #d4d0d0;
+    width: 95%;
+    min-height: 85%;
+    margin:10px 0px 20px 20px ;
+}
+input::-webkit-inner-spin-button {
+    display: none;
+  }
+.input{
+    margin: 40px 0px 0px 20px;
+    border: none;
+    border-bottom: 1px solid #d4d0d0;
+    width: 210px;
+    height: 30px;
+    
+}
+.input:focus{
+    outline: none;
+    border-bottom-color: #c82506;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #b3acac;
+    opacity: 1; /* Firefox */
+  }
+#CompAdd{
+    width: 450px;
+}
+.radio{
+    margin:40px 10px 0px 20px ;
+}
+.radioText{
+    margin-right: 45px;
+    font-size: 14px;
+}
+#button1{
+    width: 100px;
+    height: 40px;
+    color: #c82506;
+    border: 1px solid #c82506;
+    background-color: white;
+    margin-left: 5px;
+}
+#button2{
+    height: 40px;
+    width: 170px;
+    background-color: #c82506;
+    border: none;
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#username~div{
+    width: 340px;
+    margin-left: 400px;
+    margin-top: -50px;
+}
+#button3{
+    width: 100px;
+    height: 40px;
+    color: #c82506;
+    border: 1px solid #c82506;
+    background-color: white;
+    /* margin-left: 400px;
+    margin-top: -200px; */
+}
+#button4{
+    height: 40px;
+    width: 170px;
+    background-color: #c82506;
+    border: none;
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+ .invalid{
+    
+    font-size:10px;
+    color: #c82506;
+    margin-left: 20px;
+}
+
+.flex{
+    display: flex;
+}
+input[name="radio"] {
+	accent-color: #c82506;
+}
+
+#input1{
+    margin: 10px 10px 0px;
+}
+#username{
+    font-weight: bold;
+    font-size: 20px;
+}
+#type{
+    background-color: #008000;
+    font-size: 12px;
+    margin-left: 10px;
+    color: white;
+    border-radius: 5px;
+    
+}
+.p{
+    margin-left: 30px;
+    line-height: 10px;
+    width: 300px;
+}
+#add{
+    height: 40px;
+    font-weight: bold;
+    padding-left: 10px;
+    background-color: white;
+    display: flex;
+    color: #c82506;
+    border: 1px solid #b3acac;
+    padding-top: 10px;
+}
+/* --------------------Right Box--------------------------------------------------- */
+
+#rightBox{
+    flex: 3;    
+}
+#maindiv{
+ height: 87%;
+ width: 75%;
+ margin-top: 50px;
+ margin-left: 20px;
+}
+#maindiv>div{
+    background-color: white;
+ padding-bottom: 10px;
+}
+#order{
+    padding:15px 15px ;
+}
+#order,#mrpBox,#payable{
+    border-bottom: 1px solid #b3acac;
+    
+}
+#mrpBox,#payable{
+    margin: 0px 15px;
+}
+#totalMrpDiv,#shipping,#dis,#cart,#amount{
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0px;
+}
+#mrpDiv{
+    display: flex;
+}
+#items{
+    color:#c82506
+}
+#amount{
+    font-size: 20px;
+}
+#image{
+    width: 100%;
+    margin-top: 20px;
+}
