@@ -50,7 +50,7 @@
                     <input class="radio" type="radio" value="Home" name="radio"><span class="radioText">Home</span>
                     <input class="radio" type="radio" value="Office" name="radio"><span class="radioText">Office</span>
                     <input class="radio" type="radio" value="Others" id="others" name="radio" checked="checked"><span class="radioText">Others</span>
-                    <button id="button1">Cancel</button>
+                    <a href="viewcart.html"><button id="button1">Cancel</button></a>
                     <button id="button2">Save And Deliver Here</button>
                 </div>
             </div>
@@ -188,6 +188,10 @@ function appendAddress(userAddress)
     button3.id="button3"
     let button4=document.createElement("button");
     button4.textContent="Deliver To This Address"
+    button4.addEventListener("click",deliver)
+    function deliver(){
+        window.location.href="payment.html"
+    }
     button4.id="button4";
     let buttons=document.createElement("div");
     let box=document.createElement("div");

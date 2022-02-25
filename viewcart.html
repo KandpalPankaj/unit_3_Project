@@ -73,7 +73,7 @@ else{
 
 function appendCart(cartarr)
 {
-    
+    let value;
     
     cartarr.map(function(el){
         let div=document.createElement("div");
@@ -84,10 +84,12 @@ function appendCart(cartarr)
         name.textContent=el.name;
         name.id="prodName"
         let price=document.createElement("div");
-        price.textContent="₹"+el.price;
+        price.textContent="₹"+(el.price);
+        let firstPrice=el.price;
         price.id="prodPrice";
         let stprice=document.createElement("div");
         stprice.textContent="₹"+el.stprice;
+        let firstStprice=el.stprice;
         stprice.id="stprice";
         let quantity=document.createElement("div");
         quantity.textContent="Quantity"
@@ -96,15 +98,32 @@ function appendCart(cartarr)
         select.id="select"
         let option1=document.createElement("option");
         option1.textContent=1;
+        option1.value=1;
         let option2=document.createElement("option");
         option2.textContent=2;
+        option2.value=2;
         let option3=document.createElement("option");
         option3.textContent=3;
+        option3.value=3;
         let option4=document.createElement("option");
         option4.textContent=4;
+        option4.value=4;
         let option5=document.createElement("option");
         option5.textContent=5;
+        option5.value=5;
+        
+        select.addEventListener("change",saveValue);
+        function saveValue(event){
+            // localStorage.setItem('selectedtem', document.getElementById('select').value);
+            value=select.value
+            price.textContent="₹"+((+value)*(+firstPrice));
+            stprice.textContent="₹"+((+value)*(+firstStprice));
+            el.price=((+value)*(+firstPrice));
+            el.stprice=((+value)*(+firstStprice))
 
+            
+            
+        }
         let button1=document.createElement("button");
         button1.textContent="Remove";
         button1.id="remove";
@@ -150,4 +169,5 @@ function goodkart(){
 function address(){
     window.location.href="address.html"
 }
+
 </script>
