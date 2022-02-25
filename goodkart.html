@@ -151,7 +151,12 @@ import {goodkartHeader,  slide, responsiveSlider} from "./components/goodkartHea
 
 import dropDown from "./scripts/dropDown.js";
 
-let cartArr=[] || JSON.parse(localStorage.getItem("cartData"));
+
+
+let cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
+
+
 
 
 document.getElementById("info").innerHTML=goodKartInfo();
@@ -160,7 +165,12 @@ document.getElementById("info").innerHTML=goodKartInfo();
 let header = document.getElementById("header");
 
 header.innerHTML = goodkartHeader();
-
+let cartdiv=document.getElementById("cartdiv");
+console.log(cartArr.length)
+let cartsize=document.createElement("div");
+cartsize.id="cartsize";
+cartsize.textContent=`${cartArr.length}`
+cartdiv.append(cartsize)
 
 dropDown();
 
@@ -597,7 +607,9 @@ let addToCart = (el)=>{
 
     cartArr.push(el);
     localStorage.setItem("cartArr",JSON.stringify(cartArr));
-
-
+    
+    cartsize.textContent=`${cartArr.length}`
+   
 }
+
 </script>
