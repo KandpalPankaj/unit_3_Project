@@ -1,6 +1,6 @@
 #container_ask_question{
-    width:1200px;
-    border:1px solid red;
+    width:100%px;
+    /* border:1px solid red; */
     margin: auto;
     background-color: #EEEEEE;
     /* font-family: sans-serif; */
@@ -175,38 +175,46 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 #recent_question_div{
-    width:98%;
+    width: 85%;
     height:300px;
     /* border:1px solid red; */
     overflow: auto;
      white-space: nowrap;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
     margin: auto;
-    font-size: 16px; 
+    font-size: 20px; 
 }
 .question_card{
-    width:300px;
-    height:99%;
-    border:1px solid red;
+    width:350px;
+    height:50%;
+    /* border:1px solid red; */
     /* border-radius:5px; */
-    font-size: 16px; 
-    font-size: 16px;                   
+                 
+}
+.question_card>h4{
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.question_card1>h4{
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 .patient_image{
     width:100%;
-    height:53%;
+    height:100%;
     /* border:1px solid red; */
     font-size: 16px;         
 }
 .patient_image>img{
     width:100%;
     height:100%;
-    /* border-radius:5px; */
+    border-radius:5px;
 }
 .question_card1{
-    width:300px;
-    height:99%;
-    border:1px solid red;
+    width:350px;
+    height:50%;
+    /* border:1px solid red; */
     margin-left:13px;
     /* border-radius:5px; */
     
