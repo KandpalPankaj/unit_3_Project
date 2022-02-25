@@ -45,3 +45,10 @@ h2{
     height: 50px;
     padding: 26px 0px 0px 40px;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+i{
+    margin-right: 10px;
+}
