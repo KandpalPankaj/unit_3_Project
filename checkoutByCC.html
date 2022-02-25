@@ -21,10 +21,7 @@
                 <div>Lybrate</div>
             </div>
             <h2>Enter new card</h2>
-            <div>
-                Total Payable Amount 2000
-            </div>
-            <div>Transaction id</div>
+            
         </div>
         <div id="rightBox">
             <div id="paymentDiv">CARDS (CREDIT/DEBIT)</div>
@@ -80,4 +77,15 @@ function proceed(){
 
     }
 }
+
+let payablePrice=localStorage.getItem("payablePrice")
+    let id=localStorage.getItem("tid")
+    let div=document.getElementById("leftBox");
+
+    let payable=document.createElement("div");
+    payable.textContent=`Total Payable Amount ₹${payablePrice}`
+    
+    let Transaction=document.createElement("div");
+    Transaction.textContent=`Transaction id ${id}`
+    div.append(payable,Transaction)
 </script>

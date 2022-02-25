@@ -60,7 +60,7 @@ function emptyCart(){
 if(cartarr.length===0)
 {
     emptyCart();
-    
+    localStorage.setItem("payablePrice",0);
 }
 else{
     
@@ -68,6 +68,7 @@ else{
     appendCart(cartarr)
     let parent=document.getElementById("rightBox")
     appendOrderSummary(parent,cartarr);
+    localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
 }
 
 
@@ -76,6 +77,7 @@ function appendCart(cartarr)
     let value;
     
     cartarr.map(function(el){
+        
         let div=document.createElement("div");
         let image=document.createElement("img");
         image.src=el.img;

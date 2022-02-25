@@ -71,6 +71,7 @@ function appendOrderSummary(parent,cartarr){
     let amountPayable=document.createElement("div");
     amountPayable.textContent="Amount Payable";
     let payablePrice=document.createElement("div");
+    payablePrice.id="payablePrice"
     payablePrice="₹"+sum3
     
     let image=document.createElement("img");
@@ -90,5 +91,6 @@ function appendOrderSummary(parent,cartarr){
     div.append(order,mrpBox,payable)
     maindiv.append(div,image)
     parent.append(maindiv);
+    return sum3;
     }
     export default appendOrderSummary
