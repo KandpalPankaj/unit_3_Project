@@ -33,10 +33,12 @@ function goodkartHeader() {
         <span>LybrateCash</span>
     </div>
     <div id="homebtn"><button>Home</button></div>
-
+    <div id="cartdiv">
+   
     <a id="cart" href="viewcart.html"><i class="material-icons">
             shopping_cart
         </i></a>
+        </div>
 
 
 </div>
