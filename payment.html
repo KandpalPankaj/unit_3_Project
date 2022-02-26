@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./styles/payment.css">
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script src="https://kit.fontawesome.com/4bcb279047.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <title>https://www.lybrate.com/viewcart#address</title>
 </head>
 <body>
@@ -70,8 +72,19 @@
 </body>
 </html>
 <script type="module">
+    import navbar from "./components/navbarCart.js"
+    document.getElementById("navbar").innerHTML=navbar();
     import appendOrderSummary from "./scripts/orderSummary.js"
+ 
     let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
+
+    let cartdiv=document.getElementById("cartdiv");
+
+let cartsize=document.createElement("div");
+cartsize.id="cartsize";
+cartsize.textContent=`${cartarr.length}`
+cartdiv.append(cartsize)
     let parent=document.getElementById("rightBox")
     appendOrderSummary(parent,cartarr);
 </script>

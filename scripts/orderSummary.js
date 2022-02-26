@@ -56,7 +56,7 @@ function appendOrderSummary(parent,cartarr){
     let payable=document.createElement("div");
     payable.id="payable"
     let cart=document.createElement("div");
-    cart.id="cart"
+    cart.id="cart1"
     let cartTotal=document.createElement("div");
     cart.textContent="Cart Total";
     let sum3=0;
@@ -86,6 +86,7 @@ function appendOrderSummary(parent,cartarr){
     
     
     cart.append(cartTotal,cartPrice)
+    
     amount.append(amountPayable,payablePrice);
     payable.append(cart,amount)
     div.append(order,mrpBox,payable)
