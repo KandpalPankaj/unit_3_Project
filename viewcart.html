@@ -8,11 +8,15 @@
     <link rel="stylesheet" href="./styles/viewcart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
     <title>https://www.lybrate.com/viewcart</title>
 </head>
 <body>
-    <div id="navbar"></div>
+    <header id="header">
+
+    </header>
     <div id="container">
+        
         <div id="leftBox"></div>
         <div id="rightBox">
             
@@ -28,15 +32,24 @@
 </html>
 
 <script type="module">
-    import navbar from "./components/navbarCart.js"
-    document.getElementById("navbar").innerHTML=navbar();
+    import {goodkartHeader} from "./components/goodkartHeaderAndSlider.js"
+    // document.getElementById("navbar").innerHTML=navbar();
     import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML=footer();
 // import navbar and footer
 import appendOrderSummary from "./scripts/orderSummary.js"
+import authenticate from "./scripts/loginauhentication.js";
 
+let header = document.getElementById("header");
+
+header.innerHTML = goodkartHeader();
 // import authenticate from "./scripts/loginauhentication.js";
 // authenticate();
+
+let category=document.getElementById("category");
+category.innerHTML=""
+category.style= "background-color: white;"
+
 
 let container=document.getElementById("container")
 
@@ -85,7 +98,7 @@ else{
     appendCart(cartarr)
     let parent=document.getElementById("rightBox")
     appendOrderSummary(parent,cartarr);
-    // localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
+    localStorage.setItem("payablePrice",JSON.stringify(appendOrderSummary(parent,cartarr)));
 }
 
 
@@ -188,5 +201,6 @@ function goodkart(){
 function address(){
     window.location.href="address.html"
 }
+authenticate();
 
 </script>

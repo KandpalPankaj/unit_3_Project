@@ -10,10 +10,13 @@
     <script src="https://kit.fontawesome.com/4bcb279047.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
     <title>https://www.lybrate.com/viewcart#address</title>
 </head>
 <body>
-    <div id="navbar"></div>
+    <header id="header">
+
+    </header>
 
     <div id="container">
         <div id="leftBox">
@@ -72,12 +75,26 @@
 </body>
 </html>
 <script type="module">
-    import navbar from "./components/navbarCart.js"
-    document.getElementById("navbar").innerHTML=navbar();
+    import {goodkartHeader} from "./components/goodkartHeaderAndSlider.js"
+    
     import appendOrderSummary from "./scripts/orderSummary.js"
     
     import footer from "./components/footer.js"
     document.getElementById("footer").innerHTML=footer();
+
+    import authenticate from "./scripts/loginauhentication.js";
+
+let header = document.getElementById("header");
+
+header.innerHTML = goodkartHeader();
+// import authenticate from "./scripts/loginauhentication.js";
+// authenticate();
+
+let category=document.getElementById("category");
+category.innerHTML=""
+category.style= "background-color: white;"
+
+authenticate();
     let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
 
 

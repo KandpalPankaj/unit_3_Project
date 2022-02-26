@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/styles/categoryPages.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -56,7 +57,7 @@
 
 
     </div>
-
+    <footer class="footer" id="footer"></footer>
 </body>
 
 </html>
@@ -74,7 +75,8 @@ import {displayContent, sort} from "./scripts/categoryAppendSort.js"
 // import authenticate from "./scripts/loginauhentication.js";
 // console.log(authenticate())
 import authenticate from "./scripts/loginauhentication.js";
-
+import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
 var SexualWellness = [{
             image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png",
             name: "Gangakshi G Cordial Vedic Syrup 200ml",
