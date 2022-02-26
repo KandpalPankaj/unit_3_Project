@@ -7,7 +7,7 @@
     <title>https://www.lybrate.com/lp/questions/ask</title>
     <link rel="icon" sizes="192*192" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
     <link rel="stylesheet" href="/styles/ask_question.css">
-  
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 <body>
     <div id="container_ask_question">
@@ -176,5 +176,10 @@
         </div>
         </div>
     </div>
+    <footer id="footer" class="footer"></footer>
 </body>
 </html>
+<script type="module">
+    import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
+</script>

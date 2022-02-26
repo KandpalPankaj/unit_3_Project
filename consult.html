@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Doctor Consultation - Consult India's Best Doctors Online | Lybrate</title>
     <script src="https://kit.fontawesome.com/8e986db483.js" crossorigin="anonymous"></script>
+    <link rel="icon" sizes="192*192" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 <style>
     #container{
@@ -349,5 +351,10 @@
             </div>
         </div>
     </div>
+    <footer class="footer" id="footer"></footer>
 </body>
 </html>
+<script type="module">
+    import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
+</script>
