@@ -107,7 +107,7 @@ body{
 #LybrateCash>img{
     margin-right:3px;
 }
-#homebtn>button{
+#homebtn>a>button{
     background-color: white;
     border: 1px solid;
     padding: 2px 7px;
