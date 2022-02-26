@@ -1,6 +1,6 @@
 function goodkartHeader() {
     return ` <div id="navbar">
-    <div id="logo"><img src="https://www.lybrate.com/img/Lybrate-Goodkart-Logo.png" alt=""></div>
+    <div id="logo"><a href="goodkart.html"><img src="https://www.lybrate.com/img/Lybrate-Goodkart-Logo.png" alt=""></a></div>
     <div id="searchbar">
         <input type="text" name="searchbar" id="search" placeholder="Search for health products">
         <button><i class="material-icons">

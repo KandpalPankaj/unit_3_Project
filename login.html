@@ -146,6 +146,15 @@ let Login = async () => {
         isLogin =true;
         localStorage.setItem("isLogin",isLogin);
         
+
+        let btn = document.createElement("button");
+        btn.textContent = "Go For Shopping";
+        btn.addEventListener("click",()=>{
+            window.location.href="goodkart.html"
+        })
+        btn.setAttribute("class","signIn")
+        document.querySelector(".form-type-1").append(btn)
+        
         // location.href="goodkart.html"
     }else{
         alert(data.message);
