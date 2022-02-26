@@ -51,7 +51,7 @@
             <input type="email" placeholder="Email" id="emailID-2">
             <input type="password" placeholder="Password" id="password-2">
 
-            <div class="termsCon"><input type="checkbox" id="accept" value="" onclick="acceptTerms()">I agree to Lybrate's <span style="color: crimson;">Terms of Use</span> and <span style="color: crimson;">Privacy Agreement</span></div>
+            <div class="termsCon"><input type="checkbox" id="accept" value="">I agree to Lybrate's <span style="color: crimson;">Terms of Use</span> and <span style="color: crimson;">Privacy Agreement</span></div>
 
             <button class="createAcc" onclick = "Registers()">LET'S GET STARTED</button>
             <!-- <a href="" class="password-forget">Forget your password?</a> -->
@@ -64,6 +64,9 @@
 
 </html>
 <script>
+
+let isLogin = false;
+
 document.querySelector(".registerTag").addEventListener('click', function() {
     document.querySelector(".form-type-1").style.display = "none";
     document.querySelector(".form-type-2").style.display = "flex";
@@ -74,13 +77,12 @@ function reload() {
 }
 
 let Register = async () => {
-
     try {
 
     let register_data = {
 
     name : document.getElementById("name").value,
-    email : "email",
+    email: document.getElementById("emailID-2").value,
     password : document.getElementById("password-2").value,
     username:document.getElementById("emailID-2").value,
     mobile : document.getElementById("number").value,
@@ -101,7 +103,13 @@ let Register = async () => {
     });
 
     let data = await res.json();
-    console.log("data:",data);
+    console.log(data)
+    if(data.error==false){
+        alert(data.message);
+        location.reload()
+    }else{
+        alert(data.message)
+    }
     }
     catch(err){
     console.log("err:", err)
@@ -129,11 +137,24 @@ let Login = async () => {
     });
 
     let data = await res.json();
-    console.log("data:", data);
+   console.log(data)
+    if(data.error==false){
+        alert("Login Succesfull");
+        
+       getUser(login_data.username, data.token);
+     
+        isLogin =true;
+        localStorage.setItem("isLogin",isLogin);
+        
+        // location.href="goodkart.html"
+    }else{
+        alert(data.message);
+        isLogin=false;
+        localStorage.setItem("isLogin",isLogin);
+    }
+    
 
-    return data;
-
-    getUser(login_data.username, data.token);
+    
     }
     catch(err){
     console.log("err:", err)
@@ -152,7 +173,8 @@ try{
   });
 
   let data = await res.json();
-  console.log("data:", data)
+  localStorage.setItem("loginData",JSON.stringify(data))
+  
 }
 catch(err){
   console.log("err:", err);
@@ -162,27 +184,26 @@ catch(err){
     
 
 
-function acceptTerms() {
-    document.querySelector("#accept").value = 'yes'
-}
-
 
 function Registers(){
-    Register()
-    let val = document.querySelector("#accept").value
+    
+    let val = document.querySelector("#accept")
 
-    if(val == "yes"){
-        alert("Register Successful")
+    if(val.checked){
+       
+        Register();
+       
     }
     else{
         alert("Please accept Term & Condition")
     }
-    document.querySelector(".form-type-1").style.display = "flex";
-    document.querySelector(".form-type-2").style.display = "none";
+    
+    // document.querySelector(".form-type-1").style.display = "flex";
+    // document.querySelector(".form-type-2").style.display = "none";
 }
 
 
-Logins = async() => {
+function Logins(){
     
     
 
@@ -193,8 +214,8 @@ Logins = async() => {
         alert("Please Fill The Details")
 
     }else{
-        alert("Login Successful")
-        location.href = "index.html"
+        Login();
+        
     }
     
 }

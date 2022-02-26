@@ -145,6 +145,7 @@
 
 </html>
 <script type="module">
+   
 
  import goodKartInfo from "./components/goodKartInfo.js";
 
@@ -155,8 +156,6 @@ import dropDown from "./scripts/dropDown.js";
 
 
 let cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
-
-
 
 
 
@@ -174,6 +173,39 @@ cartsize.textContent=`${cartArr.length}`
 cartdiv.append(cartsize)
 
 dropDown();
+
+
+let loginData= JSON.parse(localStorage.getItem("loginData"));
+let isLogin= localStorage.getItem("isLogin")
+// console.log(isLogin)
+let signine=document.getElementById("loginUser");
+let logOut=document.getElementById("logout");
+logOut.addEventListener("click",()=>{
+    location.reload()
+    isLogin=false;
+    localStorage.setItem("isLogin",isLogin);
+    if(isLogin=="true"){
+        location.reload()
+    signine.textContent=`Hello ${loginData.name}`;
+
+}else if(isLogin=="false"){
+    location.reload()
+    signine.textContent=`Hello, Sign in`
+}
+})
+
+if(isLogin=="true"){
+    signine.textContent=`Hello ${loginData.name}`;
+
+}else if(isLogin=="false"){
+    signine.textContent=`Hello, Sign in`
+}
+
+
+
+
+
+
 
 let sliderArr = [{
     img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Gold-membership-web.jpg"

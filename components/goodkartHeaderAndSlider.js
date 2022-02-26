@@ -8,7 +8,7 @@ function goodkartHeader() {
             </i></button>
     </div>
     <div id="signInDrop">
-        <span>Hello, Sign in</span>
+        <span id="loginUser">Hello, Sign in</span>
         <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24">
             <path ng-attr-d="{{$root.icons[ctrl.p]}}"
@@ -22,8 +22,9 @@ function goodkartHeader() {
             <a href="#">My Orders</a>
             <a href="#">My Offers</a>
             <a href="#">Health Feed</a>
-            <a href="#">Login/Signup</a>
+            <a  href="login.html">Login/Signup</a>
             <a href="#">For Doctors</a>
+            <a id="logout" href="#">Log Out </a>
         </div>
 
     </div>
