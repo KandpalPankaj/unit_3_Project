@@ -8,7 +8,7 @@ function navbar(){
             </i></button>
     </div>
     <div id="signInDrop">
-        <span>Hello, Sign in</span>
+        <span id="loginUser" >Hello, Sign in</span>
         <svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" preserveAspectRatio="xMidYMid meet"
             viewBox="0 0 24 24">
             <path ng-attr-d="{{$root.icons[ctrl.p]}}"

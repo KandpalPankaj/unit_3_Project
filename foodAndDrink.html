@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="/styles/slider.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/styles/footer.css">
 </head>
 
 <body>
@@ -56,7 +57,7 @@
 
 
     </div>
-
+    <footer class="footer" id="footer"></footer>
 </body>
 
 </html>
@@ -71,7 +72,8 @@ import secondNav from "./components/secondNavBar.js"
 import authenticate from "./scripts/loginauhentication.js";
 
 import {displayContent, sort} from "./scripts/categoryAppendSort.js"
-
+import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
 
 var FoodAndDrink = [
     {
