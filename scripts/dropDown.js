@@ -4,6 +4,7 @@ function dropDown(){
 
     let dropDownContentArr = [{
         atrribute: "wellness-drop",
+        url:"sexualWellness.html",
         id: "sexualWell",
         arr: [{
             dropDownContent: "Women Sexual Wellness"
@@ -13,6 +14,7 @@ function dropDown(){
     },
     {
         atrribute: "food-drop",
+        url:"foodAndDrink.html",
         id: "food",
         arr: [{
             dropDownContent: "Healthy Breakfast"
@@ -32,6 +34,7 @@ function dropDown(){
     },
     {
         atrribute: "vitamin-drop",
+        url:"vitaminAndSuppliment.html",
         id: "vitamin",
         arr: [{
             dropDownContent: "Liver Care"
@@ -61,6 +64,7 @@ function dropDown(){
     },
     {
         atrribute: "weight-drop",
+        url:"weightManagement.html",
         id: "weight",
         arr: [{
             dropDownContent: "Drinks for Weight Loss"
@@ -73,6 +77,7 @@ function dropDown(){
     
     {
         atrribute: "childcare-drop",
+        url:"childCare.html",
         id: "childcare",
         arr: [{
             dropDownContent: "Child Skin Products"
@@ -98,6 +103,8 @@ function dropDown(){
     dropDownContentArr[i].arr.map((el) => {
         let a = document.createElement("a");
         a.innerText = el.dropDownContent;
+        a.setAttribute("href",dropDownContentArr[i].url)
+      
         div1.append(a);
     })
     document.getElementById(dropDownContentArr[i].id).append(div1);

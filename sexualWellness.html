@@ -71,7 +71,9 @@ import secondNav from "./components/secondNavBar.js"
 import wellnessInfo from "./components/wellnessInfo.js"
 
 import {displayContent, sort} from "./scripts/categoryAppendSort.js"
-
+// import authenticate from "./scripts/loginauhentication.js";
+// console.log(authenticate())
+import authenticate from "./scripts/loginauhentication.js";
 
 var SexualWellness = [{
             image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png",
@@ -287,7 +289,7 @@ document.getElementById("wellnessInfo").innerHTML = wellnessInfo();
     
     displayContent(SexualWellness,content);
 
+    authenticate();
     
-
     
 </script>
