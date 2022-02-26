@@ -190,5 +190,15 @@ body{
     
     
 }
+#cartsize{
+    border: 1px solid;
+    text-align: center;
+    width: 17px;
+    height: 17px;
+    background-color: #dd7764;
+    color: white;
+    border-radius: 50%;
+    margin: -40px 0px 0px 10px ;
+}
 
 /* Header End */

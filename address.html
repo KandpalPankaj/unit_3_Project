@@ -64,10 +64,20 @@
 </body>
 </html>
 <script type="module">
+    import navbar from "./components/navbarCart.js"
+    document.getElementById("navbar").innerHTML=navbar();
 // import navbar and footer here
 import appendOrderSummary from "./scripts/orderSummary.js"
 
+let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
+console.log(cartarr)
 
+let cartdiv=document.getElementById("cartdiv");
+
+let cartsize=document.createElement("div");
+cartsize.id="cartsize";
+cartsize.textContent=`${cartarr.length}`
+cartdiv.append(cartsize)
 
 
 
@@ -211,7 +221,7 @@ function appendAddress(userAddress)
 
 
 
-let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
+// let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
 
 let parent=document.getElementById("rightBox")
 appendOrderSummary(parent,cartarr);

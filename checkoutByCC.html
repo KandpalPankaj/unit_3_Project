@@ -67,10 +67,11 @@ function proceed(){
         icon.className="fas fa-spinner fa-spin"
         div.append(icon)
         function test(){
-            alert("thankyou")
+            alert("Hurray! your order has been successfully placed.")
             cartarr=[];
             localStorage.setItem("cartArr",JSON.stringify(cartarr));
             
+            window.location.href="goodkart.html"
         }
 
         setTimeout(test,3000)
